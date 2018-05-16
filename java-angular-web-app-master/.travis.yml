@@ -1,0 +1,12 @@
+sudo: true
+language: node_js
+node_js:
+  - "8.9.4"
+before_install:
+- chmod +x mvnw && chmod +x .travis-deploy-heroku.sh
+install:
+- ./mvnw clean package -Pbuild-ui
+services:
+- docker
+
+script: ./.travis-deploy-heroku.sh

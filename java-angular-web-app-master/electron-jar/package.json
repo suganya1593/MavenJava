@@ -1,0 +1,23 @@
+{
+  "name": "electron-app",
+  "description": "Demonstrates spawning Express from Electron and using it to serve content",
+  "version": "1.0.0",
+  "main": "main.js",
+  "authors": [
+    "Angelo Manganiello <angelo.mang@libero.it>"
+  ],
+  "license": "GPL-3.0",
+  "scripts": {
+    "start": "electron .",
+	"package": "electron-packager . --overwrite --platform=win32 --arch=x64 --prune=true --out=distribution --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Electron-With-Express\" --asar"
+  },
+  "dependencies": {
+    "electron": "1.8.2",
+    "electron-packager": "11.1.0",
+    "express": "4.16.2",
+    "jquery": "3.3.1",
+    "keymaster": "1.6.2",
+    "lodash": "4.17.4",
+    "request": "2.83.0"
+  }
+}
